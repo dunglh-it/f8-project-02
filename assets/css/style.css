@@ -548,11 +548,14 @@ a {
 
 .blog .blog-list {
     display: flex;
+    margin-top: 55px;
     gap: 30px;
+    overflow: hidden;
 }
 
 .blog-list .item {
-    width: 33.33%;
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     background: #fff;
     border-radius: 16px;
 }
@@ -640,4 +643,76 @@ a {
 .blog .dot.active {
     cursor: default;
     background: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    padding-top: 96px;
+    background: #2E2100;
+}
+
+.footer .row {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554B;
+}
+
+.footer .row .column {
+    width: 21.6%;
+}
+
+.footer .row .column:first-child {
+    width: 35%;
+}
+
+.footer .column .desc {
+    margin: 18px 0;
+    width: 267px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #BFBCB2;
+}
+
+.footer .column .title {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding: 0 48px 14px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #FFF;
+    border-bottom: 1px solid #59554B;
+}
+
+.footer .column:nth-of-type(3) .title {
+    padding-right: 65px;
+}
+
+.footer .column:nth-of-type(4) .title {
+    padding-right: 63px;
+}
+
+.footer .list a {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #BFBCB2;
+}
+
+.footer .list a:last-child {
+    margin-bottom: 0;
+}
+
+.footer .list strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer .copyright p {
+    padding: 28px 0;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #807D74;
 }
